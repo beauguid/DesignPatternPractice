@@ -302,3 +302,27 @@ org.osgi.service.prefs.BackingStoreException: Exception loading preferences from
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.core 4 0 2016-11-11 14:31:09.408
+!MESSAGE An exception occurred during push on URI https://github.com:443/beauguid: https://github.com:443/beauguid: https://github.com:443/beauguid/info/refs?service=git-receive-pack not found
+!STACK 0
+org.eclipse.jgit.errors.NoRemoteRepositoryException: https://github.com:443/beauguid: https://github.com:443/beauguid/info/refs?service=git-receive-pack not found
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:479)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:381)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1272)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:189)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:209)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+
+!ENTRY org.eclipse.egit.core 4 0 2016-11-11 14:32:44.684
+!MESSAGE An exception occurred during push on URI http://github.com/beauguid: http://github.com/beauguid: 301 Moved Permanently
+!STACK 0
+org.eclipse.jgit.errors.TransportException: http://github.com/beauguid: 301 Moved Permanently
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:506)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:381)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1272)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:189)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:209)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
