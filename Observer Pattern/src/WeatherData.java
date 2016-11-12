@@ -7,12 +7,14 @@ public class WeatherData implements Subject {
 	private float humidity;
 	private float pressure;
 	
-	@Override
+	public WeatherData(){
+		observers = new ArrayList<Observer>();
+	}
+	
 	public void registerObserver(Observer o) {
 		observers.add(o);
 	}
 
-	@Override
 	public void removeObserver(Observer o) {
 		int i = observers.indexOf(o);
 		if(i >= 0){
@@ -20,7 +22,6 @@ public class WeatherData implements Subject {
 		}
 	}
 
-	@Override
 	public void notifyObservers() {
 		for(Observer observer : observers){
 			observer.update(temperature, humidity, pressure);
